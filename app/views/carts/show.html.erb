@@ -1,3 +1,7 @@
+  <% if enhanced_cart.empty? %>
+      <%= render 'empty' %>
+  <%else%>
+
 <section class="cart-show">
 
   <header class="page-header">
@@ -14,6 +18,7 @@
           <th>Price</th>
         </tr>
       </thead>
+      
       <tbody>
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
@@ -48,5 +53,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
