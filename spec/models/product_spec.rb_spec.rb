@@ -14,10 +14,11 @@ RSpec.describe Product, type: :model do
                         category: category)
   }
 
-  
+  context "checks class" do
     it "should validate that our class here saves successfully" do
       expect(subject).to be_valid
     end
+  end
 
     context 'requires name' do
       it 'should validate that name is present' do
